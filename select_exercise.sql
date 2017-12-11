@@ -24,7 +24,7 @@ WHERE name = 'Nevermind';
 SELECT 'Which albums were released in the 1990s' AS 'Caption';
 SELECT *
 FROM albums
-WHERE release_date = '1990';
+WHERE release_date BETWEEN 1990 AND 1999;
 
 -- Which albums had less than 20 million certified sales
 SELECT 'Which albums had less than 20 million certified sales' AS 'Caption';
