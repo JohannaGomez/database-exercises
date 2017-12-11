@@ -34,9 +34,9 @@ WHERE sales < 20;
 
 -- All the albums with a genre of "Rock". Why do these query results not include albums
 -- with a genre of "Hard rock" or "Progressive rock"?
-SELECT 'All the albums with a genre of "Rock"' AS 'Caption';
+SELECT 'All the albums with a genre of "Rock"' AS 'Caption'; -- instead of caption, I can leave it as empty string to have an empty line in the output
 SELECT *
 FROM albums
-WHERE genre LIKE '%rock%';
+WHERE genre LIKE '%rock%'; --  LIKE IS CASE insensitive
 
 
