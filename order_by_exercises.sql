@@ -8,7 +8,10 @@ FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 ORDER BY first_name;
 # 6.-  Now reverse the sort order.
-
+SELECT *
+FROM employees
+WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+ORDER BY first_name DESC;
 
 
 # 3.-  DONE!! Update the query to order by first name and then last name. The first result should now
