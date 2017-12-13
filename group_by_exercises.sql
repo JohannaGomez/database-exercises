@@ -36,10 +36,10 @@ GROUP BY e.last_name;
 # 4.-  ===================  Update your previous query to now find unique combinations of first and last
 # name where the last name starts and ends with 'E'. You should get 846 rows.
 # Using distinct:
-# SELECT DISTINCT CONCAT(e.first_name, ' ', e.last_name) AS full_name
-# FROM employees AS e
-# WHERE e.last_name LIKE 'e%e'
-# ORDER BY full_name;
+SELECT DISTINCT CONCAT(e.first_name, ' ', e.last_name) AS full_name
+FROM employees AS e
+WHERE e.last_name LIKE 'e%e'
+ORDER BY full_name;
 
 # Using group by:
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name
@@ -69,11 +69,12 @@ FROM employees AS e
 WHERE e.last_name LIKE '%q%' AND e.last_name NOT LIKE '%qu%'
 GROUP BY e.last_name
 ORDER BY e.last_name;
+--  OR THIS LINE:   ORDER BY count(*) DESC;
 
 
 # 7.-  ===================  Update your query for 'Irena', 'Vidya', or 'Maya'. Use count(*) and GROUP BY to
 # find the number of employees for each gender with those names.
-SELECT CONCAT(COUNT(e.gender), ' ', e.gender) as 'number of Femele and Male'
+SELECT CONCAT(COUNT(e.gender), ' ', e.gender) as 'number of Femele and Male' -- In count(column_name) wont bring the nulls
 FROM employees AS e
 WHERE e.first_name IN ('Irena', 'Vidya', 'Maya')
 GROUP BY e.gender;
