@@ -12,6 +12,13 @@ CONCAT(e.birth_date) AS DOB
 FROM employees AS e
 LIMIT 10;
 
+# Luis's solution (they don't use AS for th aliases and no need use another concat for birth_date:
+# SELECT
+#        CONCAT(e.last_name,', ', e.first_name)  full_name,
+#        e.birth_date  DOB
+# FROM employees  e
+# LIMIT 10;
+
 # Update the query to format full name to include the employee number so it is formatted as 'employee number - lastname, firstname'.
 SELECT CONCAT(e.emp_no, ' - ',e.last_name,', ', e.first_name) AS full_name,
        CONCAT(e.birth_date) AS DOB
